@@ -13,11 +13,25 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
 
 
-    // list of files / patterns to load in the browser
-//    files: [
-//      'dist/*.js',
-//      'test/**/*Spec.js'
-//    ],
+    //list of files / patterns to load in the browser
+    files: [
+//      {
+//          pattern: 'test/lib/jquery-1.11.1.js',
+//          watched: false, served: true, included: true
+//      },
+//      {
+//          pattern: 'test/lib/jasmine-jquery.js',
+//          watched: false, served: true, included: true
+//      },
+//
+//      {
+//          pattern: 'test/fixtures/*.html',
+//          watched: true, served: true, included: false
+//      },
+//      'test/lib/jquery-1.11.1.js',
+//      'test/lib/jasmine-jquery.js',
+//      'test/Spec/*.test.js'
+    ],
 
 
     // list of files to exclude
@@ -56,7 +70,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Safari'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode

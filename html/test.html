@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .hi{
+            color: red;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div id="hello" class="{{className}}" style="background:{{bgColor}}">
+        {{name}}
+    </div>
+    <script>
+        var hello =document.getElementById('hello');
+        var data = {
+            name:'jzl',
+            className:'hi',
+            bgColor:'yellow'
+        }
+        var regex = /.*{{(\w+)}}.*'/g;
+
+        var attrs = hello.attributes
+
+        for(var i=0;i<attrs.length;i++)
+        {
+            var attr = attrs[i]
+            var attrStr = attr.value.replace(regex,function(match,key){
+               return data[key]
+            })
+            attrs[i].value = attrStr
+        }
+        hello.textContent = hello.textContent.replace(regex,function(match,key){
+            return data[key]
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="build.js"></script>
+</head>
+<body>
+    <div class="{{className}}" data-h="{{h}}" id="div">
+        {{text}}
+    </div>
+    <div class="{{className}}" id="div1">
+        {{text}}
+    </div>
+    <script>
+        var d = new DataBridger({className:'jzl',h:'f',text:'hello'},['div','div1']);
+
+    </script>
+</body>
+</html>
